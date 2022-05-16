@@ -1,6 +1,6 @@
 <img src='./static/img/Titular.png'>
 
-# Bedu Places
+# Sites BEDU
 ### Proyecto Final de Módulo Programación con Python
 
 Introducción:
