@@ -1,4 +1,4 @@
-<img src='./static/img/Titular.png'>
+<img src='./app/static/img/Titular.png'>
 
 # Sites BEDU
 ### Proyecto Final de Módulo Programación con Python
@@ -13,4 +13,4 @@ Proyecto de una pastelería donde se trabajaron 3 áreas:
 ## Diseño de Wireframes para página web
 
 Se trabajo en el el diseño de baja fidelidad para nuestra página web.
-<img src='./static/img/wireframes/Wireframes.png'>
+<img src='./app/static/img/wireframes/Wireframes.png'>
