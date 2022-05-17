@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% from 'bootstrap4/form.html' import render_form %}
+
+{% block content%}
+    <div class="container">
+        {{ render_form(login_form) }}
+    </div>
+{% endblock %}
