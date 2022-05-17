@@ -2,24 +2,15 @@ from crypt import methods
 from flask import Flask, make_response, redirect, request, render_template, session, url_for, flash
 from flask_bootstrap import Bootstrap4
 
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired
+from app import create_app
+from app.form import LoginForm 
 
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'SUPER SECRETO'
-bootstrap = Bootstrap4(app)
+app = create_app()
 
 template_folder = './templates'
 static_folder = './static'
 
 todos = ['Comprar Cafe', 'Enviar solicitud de compra', 'Todo M3']
-
-class LoginForm(FlaskForm):
-    username = StringField('Nombre de Usuario', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField('Enviar')
 
 @app.errorhandler(404)
 def not_found(error):
