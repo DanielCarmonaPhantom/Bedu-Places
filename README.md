@@ -1,4 +1,4 @@
-<img src='./app/static/img/Titular.png'>
+<img src='./app/static/img/wireframes/Titular.png'>
 
 # Sites BEDU
 ### Proyecto Final de Módulo Programación con Python
