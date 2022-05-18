@@ -1,6 +1,6 @@
 from crypt import methods
 from flask import Flask, make_response, redirect, request, render_template, session, url_for, flash
-from flask_bootstrap import Bootstrap4
+
 
 from app import create_app
 from app.form import LoginForm 
@@ -10,7 +10,18 @@ app = create_app()
 template_folder = './templates'
 static_folder = './static'
 
-todos = ['Comprar Cafe', 'Enviar solicitud de compra', 'Todo M3']
+imagenes = [('./static/img/sites/beach1.jpg',3), ('./static/img/sites/beach1.jpg',6)]
+
+contador = 0
+limite = 0
+
+for imagen in imagenes:
+    if contador <=48:
+        contador += imagen[1]
+        limite +=1
+
+todos = imagenes[:limite]
+
 
 @app.errorhandler(404)
 def not_found(error):

@@ -1,0 +1,116 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.login {
+  background-color: #fff;
+  height: 92vh;
+}
+.login .portada .circulo {
+  background-color: #c5c5c5;
+  text-align: center;
+}
+.login .portada .circulo i {
+  font-size: 8rem;
+  color: #fff;
+}
+.login .formulario {
+  padding: 16px 32px;
+}
+.login .formulario .btn {
+  height: 3rem;
+  width: 100px;
+  margin: 20px -50px 0px -50px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  background-color: #5eb1dc;
+  border: 0px;
+}
+.login .crear {
+  padding: 0px 32px 32px 32px;
+  text-align: center;
+}
+.login .crear p {
+  color: #5eb1dc;
+}
+
+.portfolio-item {
+  position: relative;
+  border: 1px solid var #fff;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 16px;
+  height: 200px;
+}
+
+.portfolio-item img {
+  transition: all 0.3s;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-item:before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 2;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.portfolio-item .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  left: 25px;
+  bottom: 0;
+  z-index: 3;
+  right: 25px;
+  transition: all 0.3s;
+  background: rgba(94, 177, 220, 0.8);
+  padding: 10px 25px;
+  color: #fff;
+}
+
+.portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 50px;
+}
+
+.portfolio-item .portfolio-info .preview-link, .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.portfolio-item .portfolio-info .preview-link:hover, .portfolio-item .portfolio-info .details-link:hover {
+  color: var #fff;
+  border-radius: 16px;
+}
+
+.portfolio-item .portfolio-info .details-link {
+  right: 14px;
+  font-size: 28px;
+}
+
+.portfolio-item:hover:before {
+  visibility: visible;
+  opacity: 1;
+  border-radius: 16px;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  inset: auto 10px 0 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
