@@ -18,4 +18,4 @@ Se trabajo en el el diseño de baja fidelidad para nuestra página web.
 Wireframes de mediana fidelidad
 <img src='./app/static/img/wireframes/Wireframes Mid.png'>
 Wireframes de alta fidelidad
-<img src='./app/static/img/wireframes/Wireframes Hight.png'>
+<img src='./app/static/img/wireframes/Wireframes High.png'>
