@@ -27,11 +27,11 @@ Funciones de la página:
 
 Se trabajo en el el diseño de la página web.
 
-#### Wireframes de baja fidelidad
+### Wireframes de baja fidelidad
 <img src='./app/static/img/wireframes/Wireframes Low.png'>
 
-#### Wireframes de Mediana fidelidad
+### Wireframes de Mediana fidelidad
 <img src='./app/static/img/wireframes/Wireframes Mid.png'>
 
-#### Wireframes de Alta fidelidad
+### Wireframes de Alta fidelidad
 <img src='./app/static/img/wireframes/Wireframes High.png'>
