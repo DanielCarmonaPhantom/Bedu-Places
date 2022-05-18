@@ -13,4 +13,9 @@ Proyecto de una pastelería donde se trabajaron 3 áreas:
 ## Diseño de Wireframes para página web
 
 Se trabajo en el el diseño de baja fidelidad para nuestra página web.
-<img src='./app/static/img/wireframes/Wireframes.png'>
+<img src='./app/static/img/wireframes/Wireframes Low.png'>
+
+Wireframes de mediana fidelidad
+<img src='./app/static/img/wireframes/Wireframes Mid.png'>
+Wireframes de alta fidelidad
+<img src='./app/static/img/wireframes/Wireframes Hight.png'>
