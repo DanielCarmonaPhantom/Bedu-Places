@@ -10,17 +10,38 @@ app = create_app()
 template_folder = './templates'
 static_folder = './static'
 
-imagenes = [('./static/img/sites/beach1.jpg',3), ('./static/img/sites/beach1.jpg',6)]
+imagenes = [('./static/img/sites/beach1.jpg',6), 
+            ('./static/img/sites/mountain1.jpg',3), 
+            ('./static/img/sites/beach2.jpg',3),
+            ('./static/img/sites/mountain2.jpg',3), 
+            ('./static/img/sites/beach3.jpg',3),
+            ('./static/img/sites/mountain3.jpg',3), 
+            ('./static/img/sites/beach4.jpg',3),
+            ('./static/img/sites/mountain4.jpg',6), 
+            ('./static/img/sites/beach5.jpg',3),
+            ('./static/img/sites/mountain5.jpg',3), 
+            ('./static/img/sites/beach6.jpg',3),
+            ('./static/img/sites/beach7.jpg',3), 
+            ('./static/img/sites/beach8.jpg',6),
+            ('./static/img/sites/beach1.jpg',3), 
+            ('./static/img/sites/beach1.jpg',6),]
 
 contador = 0
 limite = 0
 
 for imagen in imagenes:
-    if contador <=48:
+    if contador <48:
         contador += imagen[1]
         limite +=1
 
 todos = imagenes[:limite]
+
+gallery = ['./static/img/sites/photo1.jpg',
+            './static/img/sites/photo2.jpg',
+            './static/img/sites/photo3.jpg',
+            './static/img/sites/photo4.jpg',
+            './static/img/sites/photo5.jpg',
+            './static/img/sites/photo6.jpg']
 
 
 @app.errorhandler(404)
@@ -44,6 +65,7 @@ def inicio():
 
     context = {
         'user_ip': user_ip,
+        'gallery': gallery,
         'todos': todos,
         'login_form': login_form,
         'username': username

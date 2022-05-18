@@ -4,7 +4,7 @@ body{
 
 .login{
     background-color: #fff;
-    height: 92vh;
+    height: 80vh;
     .portada .circulo{
         background-color: #c5c5c5;
         text-align: center;
@@ -38,26 +38,87 @@ body{
         }
     }
 }
+.perfil{
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  .fondo{
+    overflow: hidden;
+    max-height: 200px;
+    img{
+      width: 100%;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      height: 80%;
+    }
+  }
+  .profile {  
+  text-align: center;
+  padding: 0 32px;
+  position: relative;
+  top: -100px;
+    .circular--landscape{
+      display: inline-block;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 4px solid #fff;
+
+      img {        
+        width: auto;
+        height: 100%;
+        bottom: 0px;
+      }
+    }
+  }
+  .gallery{
+    padding: 0px 32px;
+    position: relative;
+    top: -50px;
+    img{
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      // height: 100px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+    }
+  }
+  .load-image{
+    padding: 0px 32px;
+    position: relative;
+    top: -32px;
+    button{
+      width: 100%;
+      background-color: #5eb1dc;
+      color: white;
+    }
+  }
+}
+
 .portfolio-item {
     position: relative;
     border: 1px solid var#fff;
     overflow: hidden;
-    z-index: 1;
- 
+    z-index: 1; 
     margin-bottom: 16px;
-
+    border-radius: 16px;
+    
     height: 200px;
+    // overflow: hidden;
+
   }
   .portfolio-item img {
     transition: all 0.3s;
-   
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    position:absolute;
 
-    width: 100%;
-    height: 100%;
-
+    min-height: 100%;
+    min-width: 100%;
+    margin: auto;
+    border-radius: 16px;
   }
   .portfolio-item:before {
     content: "";

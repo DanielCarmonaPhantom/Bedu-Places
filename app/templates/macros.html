@@ -1,7 +1,7 @@
 
 {% macro render_todo(todo) %}
 <div class="col-{{todo.1}} portfolio-item filter-app">
-  <div class="portfolio-img"><img src="{{todo.0}} "  alt=""></div>
+  <div class="portfolio-img"><img src="{{todo.0}} "  alt="" class="img-fluid"></div>
   <div class="portfolio-info">
     <h4>App 1</h4>
     <p>App</p>
@@ -9,4 +9,10 @@
     <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
   </div>
 </div>
+{% endmacro %}
+
+{% macro render_gallery(photo) %}
+  <div class="col-4">
+    <img src="{{ photo }}" alt="" >
+  </div>
 {% endmacro %}
