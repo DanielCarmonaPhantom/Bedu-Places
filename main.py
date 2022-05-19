@@ -78,6 +78,6 @@ def inicio():
 
         flash('Nombre de usuario registrado con exito')
 
-        return redirect(url_for('inicio'))
+        return render_template('inicio.html', **context)
 
     return render_template('inicio.html', **context)

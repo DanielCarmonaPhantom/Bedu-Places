@@ -1,6 +1,6 @@
 
 {% macro render_todo(todo) %}
-<div class="col-{{todo.1}} portfolio-item filter-app">
+<div class="col-{{todo['position']}} portfolio-item filter-app">
   <div class="portfolio-img"><img src="{{todo['url_imagen']}} "  alt="" class="img-fluid"></div>
   <div class="portfolio-info">
     <h4>App 1</h4>
@@ -14,6 +14,6 @@
 
 {% macro render_gallery(photo) %}
   <div class="col-4">
-    <img src="{{ photo }}" alt="" >
+    <img src="{{ photo['url_imagen'] }}" alt="" >
   </div>
 {% endmacro %}

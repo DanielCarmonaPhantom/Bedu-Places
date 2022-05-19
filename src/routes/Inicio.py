@@ -14,44 +14,19 @@ class LoginForm(FlaskForm):
 # Models
 from models.ImageModels import ImagenModel
 
-imagenes = [('./static/img/sites/beach1.jpg',6), 
-            ('./static/img/sites/mountain1.jpg',3), 
-            ('./static/img/sites/beach2.jpg',3),
-            ('./static/img/sites/mountain2.jpg',3), 
-            ('./static/img/sites/beach3.jpg',3),
-            ('./static/img/sites/mountain3.jpg',3), 
-            ('./static/img/sites/beach4.jpg',3),
-            ('./static/img/sites/mountain4.jpg',6), 
-            ('./static/img/sites/beach5.jpg',3),
-            ('./static/img/sites/mountain5.jpg',3), 
-            ('./static/img/sites/beach6.jpg',3),
-            ('./static/img/sites/beach7.jpg',3), 
-            ('./static/img/sites/beach8.jpg',6),
-            ('./static/img/sites/beach1.jpg',3), 
-            ('./static/img/sites/beach1.jpg',6),]
-contador = 0
-limite = 0
 
-for imagen in imagenes:
-    if contador <48:
-        contador += imagen[1]
-        limite +=1
-
-
-todos = ImagenModel.get_images()
-
-gallery = ['./static/img/sites/photo1.jpg',
-            './static/img/sites/photo2.jpg',
-            './static/img/sites/photo3.jpg',
-            './static/img/sites/photo4.jpg',
-            './static/img/sites/photo5.jpg',
-            './static/img/sites/photo6.jpg']
+imagenes = ImagenModel.get_images()
+orden = [6,3,3,3,3,3,3,6,3,3,3,3,6,3,6]
+todos = []
+for i in range(len(imagenes)):
+    imagenes[len(imagenes) -1 -i]['position'] = orden[i] 
+    todos.append(imagenes[len(imagenes) -1 - i])
 
 
 
 main=Blueprint('inicio_blueprint',__name__)
 
-@main.route('/')
+@main.route('/', methods=['GET', 'POST'])
 def inicio():
     user_ip = request.remote_addr 
     session['user_ip'] = user_ip
@@ -60,10 +35,16 @@ def inicio():
     login_form = LoginForm()
     username = session.get('username')
 
+    gallery = []
+
+    for i in range(len(imagenes)):
+        if imagenes[len(imagenes) -1 - i]['usuario'] == username:
+            gallery.append(imagenes[len(imagenes) -1 - i])
+
     context = {
         'user_ip': user_ip,
-        'gallery': gallery,
-        'todos': todos,
+        'gallery': gallery[:6],
+        'todos': todos[:13],
         'login_form': login_form,
         'username': username
     }
@@ -73,6 +54,6 @@ def inicio():
 
         flash('Nombre de usuario registrado con exito')
 
-        return redirect(url_for('inicio'))
+        return render_template('inicio.html', **context)
 
     return render_template('inicio.html', **context)
