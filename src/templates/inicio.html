@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% from 'bootstrap5/form.html' import render_form %}
+
+
+{% block content%}
+
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                {% if username == None %}
+                <div class="login">
+                    <div class="portada">
+                        <div class="circulo">
+                            <i class="bi bi-person-circle"></i>                            
+                        </div>
+                    </div>
+                    <div class="formulario">
+                        {{ render_form(login_form)}}                       
+                    </div>
+                    <div class="crear">
+                        <p>Crear una cuenta</p>
+                    </div>
+                </div>
+
+                {% else %}
+                <div class="perfil">
+                    <div class="fondo">
+                        <img src="../static/img/sites/portada.jpg" alt="">
+                    </div>
+                    <div class="profile">
+                        <div class="circular--landscape text-center">
+                            <img src="../static/img/traveler.jpg" alt="" >                         
+                        </div>
+                        <div class="name">
+                            <h2>{{ username }}</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        </div>
+                    </div>
+                    <div class="gallery">
+                        <div class="row">
+                            {% for photo in gallery%}
+                                {{ macro.render_gallery(photo)}}
+                            {% endfor%}
+                        </div>
+                    </div>
+                    <div class="load-image">
+                        <button class="btn">Subir Foto</button>
+                    </div>
+                </div>
+
+                {% endif%}
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    {% for todo in todos%}
+                        {{ macro.render_todo(todo) }}
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+{% endblock %}

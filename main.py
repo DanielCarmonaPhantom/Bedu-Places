@@ -1,5 +1,6 @@
 from crypt import methods
 from flask import Flask, make_response, redirect, request, render_template, session, url_for, flash
+from flask_login import login_required
 
 
 from app import create_app
