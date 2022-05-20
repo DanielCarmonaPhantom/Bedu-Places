@@ -5,10 +5,12 @@ body{
 .login{
     background-color: #fff;
     height: 80vh;
+    border-radius: 16px;
     .portada .circulo{
         background-color: #c5c5c5;
         text-align: center;
-
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
         i{
             font-size: 8rem;
             color: #fff;

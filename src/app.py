@@ -4,8 +4,6 @@ from flask_bootstrap import Bootstrap5
 
 from config import config
 
-
-
 # Routes
 from routes import Image
 from routes import Inicio
@@ -22,7 +20,7 @@ if __name__ == '__main__':
     bootstrap = Bootstrap5(app)
     # Blueprints
     app.register_blueprint(Inicio.main, url_prefix=('/'))
-    app.register_blueprint(Image.main, url_prefix='/api/images')
+
 
 
     # Error Handlers

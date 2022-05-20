@@ -14,19 +14,23 @@ class LoginForm(FlaskForm):
 from models.ImageModels import ImagenModel
 
 
-imagenes = ImagenModel.get_images()
-orden = [6,3,3,3,3,3,3,6,3,3,3,3,6,3,6]
-todos = []
-for i in range(len(imagenes)):
-    imagenes[len(imagenes) -1 -i]['position'] = orden[i] 
-    todos.append(imagenes[len(imagenes) -1 - i])
-
-
-
 main=Blueprint('inicio_blueprint',__name__)
 
 @main.route('/', methods=['GET', 'POST'])
 def inicio():
+
+    imagenes = ImagenModel.get_images()
+    orden = [6,3,3,3,3,3,3,6,3,3,3,3,6,3,6]
+    todos = []
+    for i in range(len(imagenes)):        
+        todos.append(imagenes[len(imagenes) -1 - i])
+
+    for i in range(len(todos[:13])):
+        todos[i]['position'] = orden[i] 
+
+
+
+
     user_ip = request.remote_addr 
     session['user_ip'] = user_ip
     user_ip = session.get('user_ip')
