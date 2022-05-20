@@ -21,9 +21,7 @@ Funciones de la página:
 * Subir Fotos
 * Visualizar los lugares
 
-## Flujo de la aplicación
-Aquí se puede observar cada una de las funcionalidades que incorpora la app.
-<img src='./src/static/img/wireframes/UserFlow.png'>
+
 
 
 ## Diseño de Wireframes para página web
