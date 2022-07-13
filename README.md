@@ -13,7 +13,7 @@ Proyecto de una página de sitios llamativos donde se trabajaron 3 áreas:
 
 Plantamiento del problema: Usuario desean buscar un lugar al que puedan visitar. 
 
-Solución: Una web donde puedan encontrar solo fotos de lugares llamativos y que tambien les permita subir foto de algún lugar visitado.
+Solución: Web donde puedan encontrar solo fotos de lugares llamativos y que también les permita subir foto de algun lugar visitado.
 
 Funciones de la página:
 
